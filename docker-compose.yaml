@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+
+  ubuntu-vnc:
+    image: dorowu/ubuntu-desktop-lxde-vnc
+    container_name: ubuntu-vnc
+    environment:    #optional
+      - USER= User
+      - PASSWORD= p4ssw0rd
+    ports: 
+      - "6080:80"   
+    volumes:
+      - ./dev/shm:/dev/shm            
+    restart: unless-stopped
+
+

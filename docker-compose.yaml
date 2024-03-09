@@ -2,16 +2,20 @@ version: '3.3'
 
 services:
 
-  ubuntu-vnc:
+  desktop-vnc:
     image: dorowu/ubuntu-desktop-lxde-vnc
-    container_name: ubuntu-vnc
+    container_name: desktop-vnc
     environment:    
+      - USER=User
       - VNC_PASSWORD=p4ssw0rd
+      - HTTP_PASSWORD=p4ssw0rd
+      - RESOLUTION=1920x1080
     ports: 
       - "6080:80" 
       - "5900:5900"
+    restart: unless-stopped      
     volumes:
       - ./dev/shm:/dev/shm            
-    restart: unless-stopped
+
 
 

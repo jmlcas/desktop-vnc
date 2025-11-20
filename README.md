@@ -1,6 +1,3 @@
-# desktop-vnc
-Desktop VNC -Escritorio remoto - Docker-compose
+# Desktop-VNC
 
-
-Ver en "localhost:6080"
-
+Ver en "http://localhost:6080"
